@@ -3,8 +3,9 @@ import "./Header.css"
 
 const Header = () => {
   return (
-    <div>
-      <h1 className="title">Brew Match</h1>
+    <div className="title">
+      <h1 >Brew Match</h1>
+      <h3>Choose a beer, find a delicious food match.</h3>
     </div>
   )
 }
