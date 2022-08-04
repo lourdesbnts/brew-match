@@ -1,4 +1,4 @@
-export let getBeerData= () => {
+export const getBeerData = () => {
   return fetch("https://api.punkapi.com/v2/beers").then(
     (response) => {
       if (!response.ok) {
