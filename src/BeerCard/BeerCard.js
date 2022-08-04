@@ -1,11 +1,13 @@
 import React from "react";
 
-const BeerCard = () => {
+const BeerCard = ({ beerName, foodPairings }) => {
+  const foodPair = foodPairings.map((pair) => {
+    return <p>{pair}</p>
+  })
   return (
-    <div>
-      <h2>
-
-      </h2>
+    <div className="beer-card">
+      <h2>{beerName}</h2>
+        {foodPair}
     </div>
   )
 }
