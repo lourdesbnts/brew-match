@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import "./BeerCard.css"
 
 
-const BeerCard = ({ beerName, tagline, abv, img, foodPairings  }) => {
+const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description }) => {
   const [flipCards, setFlipCards] = useState(false);
 
 const foodPair = foodPairings.map((pair) => {
-  return <p>{pair}</p>
+  return <p>{pair}</p> 
 })
-//create state to hold our flip 
-//add className="front"
-//create a sibling div that will have className="back",
-//thats where the description of the beer and the radio buttons,
-//next to the food that pairs well with the beer.
 
 return (
   <div className={`beer-card ${flipCards ? "flip" : ""}`}>
@@ -24,7 +19,10 @@ return (
       
   </div>
   <div className="back" onClick={() => setFlipCards(!flipCards)}>
-      {foodPair}
+  <p>{description}</p>
+  <p>What sounds good with this?</p>
+      {foodPair} 
+      <button>SAVE TO TRY LATER</button>
   </div>
   </div>
   )

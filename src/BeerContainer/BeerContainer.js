@@ -13,6 +13,7 @@ const BeerContainer = ({ beers }) => {
       abv={beer.abv}
       img={beer.image_url}
       foodPairings={beer.food_pairing}
+      description={beer.description}
       />
     )
   })
