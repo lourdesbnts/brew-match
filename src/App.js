@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { getBeerData } from "./apiCalls";
+import BeerContainer from "./BeerContainer/BeerContainer";
+import Header from "./Header/Header";
+// import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [beers, setBeers] = useState([]);
+
+    useEffect(() => {
+      getBeerData()
+      .then(data => {
+        setBeers( ...beers, data)
+        console.log('data', data)
+      })
+    }, [])
+    console.log('beers', beers)
+
+    return (
+      <div>
+        <Header />
+        <main>
+        {console.log(beers)}
+         <BeerContainer beers={beers}/>
+        </main>
+      </div>
+      
+    )
+  }
+
+
+
+
+
 
 export default App;

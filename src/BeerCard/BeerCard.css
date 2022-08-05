@@ -1,0 +1,33 @@
+.beer-card {
+  height: 560px;
+  width: 200px;
+  box-sizing: border-box;
+  border: 3px solid black;
+  padding: 10px;
+  background: yellow;
+  transform-style: preserve-3d;
+  transition: 500ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+
+}
+
+.beer-card:hover {
+  --translate-y: -2px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.beer-card.flip {
+  --rotate-y: 180deg;
+}
+
+.beer-card .front, 
+.beer-card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.beer-card .back {
+  transform: rotateY(180deg);
+}
