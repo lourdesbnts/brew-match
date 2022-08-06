@@ -4,7 +4,6 @@ import "./FavoriteContainer.css";
 
 
 const FavoriteContainer = ({favorites}) => {
-
   const favCards = favorites.map((favorite) => {
     
     return (
@@ -22,7 +21,7 @@ const FavoriteContainer = ({favorites}) => {
 
   return (
     <div className="favorite-container">
-      {favCards}
+      { favCards.length ? favCards : <p>You haven't saved anything.</p> }
     </div>
   )
 }

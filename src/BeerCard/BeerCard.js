@@ -9,7 +9,7 @@ const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description, save
 
 const foodPair = foodPairings.map((pair) => {
   return ( <div key={pair}>
-    <input key={pair.id} type="radio" value={pair} name={pair} onChange={(event) => setPairing(event.target.value)}/> 
+    <input key={pair.id} type="radio" value={pair} name="food" onChange={(event) => setPairing(event.target.value)}/> 
     <label htmlFor={pair}>{pair}</label>
   </div> )
 })

@@ -19,7 +19,9 @@ const App = () => {
     }, [])
 
     const saveFavorite = (pairing) => {
+      
      setFavorites([...favorites, pairing])
+
     }
 
     //here
