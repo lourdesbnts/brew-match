@@ -2,7 +2,7 @@ import React from "react";
 import BeerCard from "../BeerCard/BeerCard";
 import "./BeerContainer.css";
 
-const BeerContainer = ({ beers, favorites, setFavorites }) => {
+const BeerContainer = ({ beers, saveFavorite}) => {
   const beerCards = beers.map((beer) => {
     return (
     <BeerCard 
@@ -14,16 +14,15 @@ const BeerContainer = ({ beers, favorites, setFavorites }) => {
       img={beer.image_url}
       foodPairings={beer.food_pairing}
       description={beer.description}
-      favorites={favorites}
-      setFavorites={setFavorites}
+      saveFavorite={saveFavorite}
       />
     )
   })
 
   return (
-    <div className="beer-container">
+    <section className="beer-container">
       {beerCards}
-    </div>
+    </section>
   )
 }
 

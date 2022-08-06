@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./BeerCard.css"
+import "./BeerCard.css";
 
 
-const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description, favorites, setFavorites }) => {
+const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description, saveFavorite}) => {
   const [flipCards, setFlipCards] = useState(false);
-  const [isChecked, setIsChecked] = useState(false); 
   const [pairing, setPairing] = useState("");
+ 
 
 const foodPair = foodPairings.map((pair) => {
   return ( <div key={pair}>
@@ -16,8 +16,12 @@ const foodPair = foodPairings.map((pair) => {
 
 const handleSubmit = event => {
   event.preventDefault();
-
-  console.log(pairing);
+  saveFavorite({
+    pairing: pairing,
+    beerImage: img,
+    beerName: beerName
+  })
+  
 };
 
 return (
@@ -41,9 +45,5 @@ return (
   </div>
   )
 }
-
-// setFavorites([...favorites, {image: `${img}`, dish: ``}])
-
-
 
 export default BeerCard;

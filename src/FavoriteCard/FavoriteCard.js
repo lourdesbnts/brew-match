@@ -1,7 +1,8 @@
 import React from "react";
+import "./FavoriteCard.css";
 
-const FavoriteCard = () => {
-  const favoriteSelection = 
+const FavoriteCard = ({}) => {
+
 }
 
 export default FavoriteCard;
