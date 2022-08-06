@@ -4,6 +4,7 @@ import BeerContainer from "./BeerContainer/BeerContainer";
 import FavoriteContainer from "./FavoriteContainer/FavoriteContainer";
 import Header from "./Header/Header";
 import { Route } from 'react-router-dom';
+import { array } from "prop-types";
 // import "./App.css"
 
 const App = () => {
@@ -19,9 +20,30 @@ const App = () => {
     }, [])
 
     const saveFavorite = (pairing) => {
-      
-     setFavorites([...favorites, pairing])
+      // console.log("favorites", favorites)
+      // console.log("pairing", pairing)
+      // if (!favorites.includes(pairing)) {
+        //   return pairing
+        // } else {
+          //   return "Already added!"
+          // }
+          const matchFood = favorites.filter(fav => fav.pairing === pairing.pairing)
+          if (matchFood.length) {
+            return "Already added!"
+          } else {
+            setFavorites([...favorites, pairing])
+        }
 
+      // let match;
+      // for (var i = 0; i < favorites.length; i++) {
+      //   console.log("i what u doing ", i)
+      //   if (![i.pairing].includes(pairing.pairing)) {
+      //     return pairing;
+      //   } else {
+      //     // match = i;
+      //     return "Already added"
+      //   }
+      // }
     }
 
     //here
