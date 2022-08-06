@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import "./BeerCard.css"
 
 
-const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description }) => {
+const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description, favorites, setFavorites }) => {
   const [flipCards, setFlipCards] = useState(false);
+  const [isChecked, setIsChecked] = useState(false); 
+  const [pairing, setPairing] = useState("");
 
 const foodPair = foodPairings.map((pair) => {
-  return <p>{pair}</p> 
+  return ( <div key={pair}>
+    <input key={pair.id} type="radio" value={pair} name={pair} onChange={(event) => setPairing(event.target.value)}/> 
+    <label htmlFor={pair}>{pair}</label>
+  </div> )
 })
+
+const handleSubmit = event => {
+  event.preventDefault();
+
+  console.log(pairing);
+};
 
 return (
   <div className={`beer-card ${flipCards ? "flip" : ""}`}>
@@ -18,15 +29,20 @@ return (
       <p>{abv}</p>
       
   </div>
-  <div className="back" onClick={() => setFlipCards(!flipCards)}>
+  <div className="back">
   <p>{description}</p>
   <p>What sounds good with this?</p>
+  <form className="food-pair" onSubmit={(event) => handleSubmit(event)} >
       {foodPair} 
-      <button>SAVE TO TRY LATER</button>
+      <button type="submit">SAVE TO TRY LATER</button>
+  </form>
+      <button onClick={() => setFlipCards(!flipCards)}>Go Back</button>
   </div>
   </div>
   )
 }
+
+// setFavorites([...favorites, {image: `${img}`, dish: ``}])
 
 
 

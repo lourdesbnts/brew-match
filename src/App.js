@@ -6,22 +6,23 @@ import Header from "./Header/Header";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {
       getBeerData()
       .then(data => {
         setBeers( ...beers, data)
-        console.log('data', data)
       })
     }, [])
-    console.log('beers', beers)
+
+    //here
+    //write new method that takes in a new favorite and runs setfavorites to add on to array on line 9 and that new method will get passed down to handle submit in beeer cards
 
     return (
       <div>
         <Header />
         <main>
-        {console.log(beers)}
-         <BeerContainer beers={beers}/>
+         <BeerContainer beers={beers} favorites={favorites} setFavorites={setFavorites}/>
         </main>
       </div>
       
