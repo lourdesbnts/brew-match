@@ -1,6 +1,7 @@
 import React from "react";
 import BeerCard from "../BeerCard/BeerCard";
 import "./BeerContainer.css";
+import PropTypes from "prop-types";
 
 const BeerContainer = ({ beers, saveFavorite}) => {
   const beerCards = beers.map((beer) => {
@@ -25,5 +26,12 @@ const BeerContainer = ({ beers, saveFavorite}) => {
     </section>
   )
 }
+
+BeerContainer.propTypes = {
+  beers: PropTypes.array,
+  saveFavorite: PropTypes.func
+}
+
+
 
 export default BeerContainer;

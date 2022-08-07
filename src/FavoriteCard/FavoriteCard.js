@@ -1,5 +1,6 @@
 import React from "react";
 import "./FavoriteCard.css";
+import PropTypes from "prop-types";
 
 const FavoriteCard = ({beerName, beerImage, pairing}) => {
   return (
@@ -9,6 +10,12 @@ const FavoriteCard = ({beerName, beerImage, pairing}) => {
       <p>{pairing}</p>
     </article>
   )
+}
+
+FavoriteCard.propTypes = {
+  beerName: PropTypes.string, 
+  beerImage: PropTypes.string,
+  pairing: PropTypes.string
 }
 
 export default FavoriteCard;

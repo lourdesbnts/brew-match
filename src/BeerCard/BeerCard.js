@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./BeerCard.css";
+import PropTypes from "prop-types";
 
 
 const BeerCard = ({ beerName, tagline, abv, img, foodPairings, description, saveFavorite}) => {
@@ -45,5 +46,16 @@ return (
   </div>
   )
 }
+
+BeerCard.propTypes = {
+  beerName: PropTypes.string,
+  tagline: PropTypes.string,
+  abv: PropTypes.number,
+  img: PropTypes.string,
+  foodPairings: PropTypes.array,
+  description: PropTypes.string,
+  saveFavorite: PropTypes.func
+}
+
 
 export default BeerCard;
