@@ -5,6 +5,7 @@ import FavoriteContainer from "./FavoriteContainer/FavoriteContainer";
 import Header from "./Header/Header";
 import { Route } from 'react-router-dom';
 import { array } from "prop-types";
+import Error from "./Error/Error";
 // import "./App.css"
 
 const App = () => {
@@ -56,6 +57,9 @@ const App = () => {
           </Route>
           <Route path="/favorites" className="favorite">
             <FavoriteContainer favorites={favorites}/>
+          </Route>
+          <Route path="*">
+            <Error />
           </Route>
         </main>
     )

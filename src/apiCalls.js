@@ -1,8 +1,9 @@
 export const getBeerData = () => {
   return fetch("https://api.punkapi.com/v2/beers").then(
     (response) => {
+      console.log(response)
       if (!response.ok) {
-        throw new Error("Oops, something went wrong!");
+        throw new Error("Oops, something went wrong!!!!");
       } else {
         return response.json();
       }
