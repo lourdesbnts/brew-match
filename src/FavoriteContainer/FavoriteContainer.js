@@ -1,6 +1,7 @@
 import React from "react";
 import FavoriteCard from "../FavoriteCard/FavoriteCard";
 import "./FavoriteContainer.css";
+import PropTypes from "prop-types";
 
 
 const FavoriteContainer = ({favorites}) => {
@@ -24,6 +25,10 @@ const FavoriteContainer = ({favorites}) => {
       { favCards.length ? favCards : <p>You haven't saved anything.</p> }
     </div>
   )
+}
+
+FavoriteContainer.propTypes = {
+  favorites: PropTypes.array
 }
 
 export default FavoriteContainer;
