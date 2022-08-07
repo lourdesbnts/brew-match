@@ -16,7 +16,15 @@ describe('Homeview page', () => {
     cy.get('[data-cy="beer-cards"]')
   })
 
-  it("should be able to flip card on click and show description, food pair options, save button and go back button", () => {
+  it("should display beer cards with image, name, tagline and abv", () => {
+    cy.get('[data-cy="beer-cards"]')
+      .get('[data-cy="image"]')
+      .get('[data-cy="beer-name"]')
+      .get('[data-cy="tagline"]')
+      .get('[data-cy="abv"]')
+  })
+
+  it("should be able to flip card and show description, food pair options, save button and go back button", () => {
     cy.get('[data-cy="beer-card-front"]').eq(0).click()
       .get('[data-cy="beer-card-back"]')
       .get('[data-cy="description"]')
@@ -24,5 +32,10 @@ describe('Homeview page', () => {
       .get('[data-cy="food-pair"]')
       .get('[data-cy="save-to-try-later"]')
       .get('[data-cy="go-back"]')
+  })
+
+  it("should be able to click back to view front of card", () => {
+    cy.get('[data-cy="beer-card-front"]').eq(0).click()
+      .get('[data-cy="beer-card-back"]').find('[data-cy="go-back"]').eq(0).click( {force: true} ) 
   })
 })

@@ -41,10 +41,10 @@ const BeerCard = ({
   return (
     <div className={`beer-card ${flipCards ? "flip" : ""}`} data-cy="beer-cards">
       <div className="front" onClick={() => setFlipCards(!flipCards)} data-cy="beer-card-front">
-        <img className="image" src={img} alt={beerName} />
-        <h2>{beerName}</h2>
-        <p>{tagline}</p>
-        <p>{abv}</p>
+        <img className="image" data-cy="image" src={img} alt={beerName} />
+        <h2 className="beer-name" data-cy="beer-name">{beerName}</h2>
+        <p className="tagline" data-cy="tagline">{tagline}</p>
+        <p className="abv" data-cy="abv">{abv}</p>
       </div>
       <div className="back" data-cy="beer-card-back">
         <p className="description" data-cy="description">{description}</p>
