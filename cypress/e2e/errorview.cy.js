@@ -6,7 +6,6 @@ describe("Error View", () => {
     cy.visit('http://localhost:3000/')
     cy.get('[data-cy="title"]').contains("Brew Match")
     .get('[data-cy="title"]').contains("Choose a beer, find a delicious food match.")
-    .get('[data-cy="home-save-button"]')
 })
 
 it("Should display error for a broken URL", () => {
