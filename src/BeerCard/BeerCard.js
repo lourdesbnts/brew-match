@@ -8,7 +8,7 @@ const BeerCard = ({
   abv,
   img,
   foodPairings,
-  description,
+  // description,
   saveFavorite,
 }) => {
   const [flipCards, setFlipCards] = useState(false);
@@ -44,16 +44,16 @@ const BeerCard = ({
         <img className="image" data-cy="image" src={img} alt={beerName} />
         <h2 className="beer-name" data-cy="beer-name">{beerName}</h2>
         <p className="tagline" data-cy="tagline">{tagline}</p>
-        <p className="abv" data-cy="abv">{abv}</p>
+        <p className="abv" data-cy="abv">ABV: {abv}</p>
       </div>
       <div className="back" data-cy="beer-card-back">
-        <p className="description" data-cy="description">{description}</p>
+        {/* <p className="description" data-cy="description">{description}</p> */}
         <p className="sounds-good" data-cy="sounds-good">What sounds good with this?</p>
         <form className="food-pair" data-cy="food-pair" onSubmit={(event) => handleSubmit(event)}>
           {foodPair}
-          <button type="submit" data-cy="save-to-try-later">SAVE TO TRY LATER</button>
+          <button className="save-to-try-later-button" type="submit" data-cy="save-to-try-later">SAVE TO TRY LATER</button>
         </form>
-        <button onClick={() => setFlipCards(!flipCards)} data-cy="go-back">Go Back</button>
+        <button className="go-back-button" onClick={() => setFlipCards(!flipCards)} data-cy="go-back">Go Back</button>
       </div>
     </div>
   );
