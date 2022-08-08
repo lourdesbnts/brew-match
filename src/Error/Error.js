@@ -3,7 +3,7 @@ import "./Error.css";
 
 const Error = () => {
   return (
-    <h2>Oops sorry, something went wrong!</h2>
+    <h2 className="error" data-cy="error">Oops sorry, something went wrong!</h2>
   )
 }
 
