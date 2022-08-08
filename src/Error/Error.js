@@ -6,7 +6,7 @@ const Error = () => {
   return (
     <>
     <Link to="/">
-          <button>Home</button>
+          <button className="error-home">Home</button>
         </Link>
     <h2 className="error" data-cy="error">Oops sorry, something went wrong!</h2>
     </>
