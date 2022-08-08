@@ -4,13 +4,11 @@ describe('Homeview page', () => {
         fixture: "mockData",
       })
     cy.visit('http://localhost:3000/')
+    cy.get('[data-cy="title"]').contains("Brew Match")
+    .get('[data-cy="title"]').contains("Choose a beer, find a delicious food match.")
+    .get('[data-cy="home-save-button"]')
   })
 
-  it("should display a title, summary, and saves button", () => {
-    cy.get('[data-cy="title"]').contains("Brew Match")
-      .get('[data-cy="title"]').contains("Choose a beer, find a delicious food match.")
-      .get('[data-cy="home-save-button"]')
-  })
 
   it("should display beer cards", () => {
     cy.get('[data-cy="beer-cards"]')
