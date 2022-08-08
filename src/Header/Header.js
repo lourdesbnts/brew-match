@@ -1,25 +1,24 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import "./Header.css"
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="title">
-      <h1 >Brew Match</h1>
+    <div className="title" data-cy="title">
+      <h1>Brew Match</h1>
       <h3>Choose a beer, find a delicious food match.</h3>
       <Route exact path="/">
-     <Link to="/favorites">
-        <button>Saves</button>
-      </Link> 
+        <Link to="/favorites">
+          <button data-cy="home-save-button">Saves</button>
+        </Link>
       </Route>
       <Route path="/favorites">
-      <Link to="/">
-        <button>Home</button>
-      </Link>
+        <Link to="/">
+          <button>Home</button>
+        </Link>
       </Route>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
-
