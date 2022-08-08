@@ -1,0 +1,12 @@
+.fav-card {
+  height: 33rem;
+  width: 15rem;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 3px solid aliceblue;
+  background: #ffdd00;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+

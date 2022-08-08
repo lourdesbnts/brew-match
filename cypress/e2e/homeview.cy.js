@@ -25,7 +25,6 @@ describe('Homeview page', () => {
   it("should be able to flip card and show description, food pair options, save button and go back button", () => {
     cy.get('[data-cy="beer-card-front"]').eq(0).click()
       .get('[data-cy="beer-card-back"]')
-      .get('[data-cy="description"]')
       .get('[data-cy="sounds-good"]')
       .get('[data-cy="food-pair"]')
       .get('[data-cy="save-to-try-later"]')

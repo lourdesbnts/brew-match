@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 } */
-.favorite {
-  background-color: blueviolet;
+
+.App {
+  background-color: black;
 }

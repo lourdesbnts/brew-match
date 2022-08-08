@@ -6,6 +6,7 @@ import Header from "./Header/Header";
 import { Route } from "react-router-dom";
 import Error from "./Error/Error";
 
+
 const App = () => {
   const [beers, setBeers] = useState([]);
   const [favorites, setFavorites] = useState([]);
@@ -34,10 +35,10 @@ const App = () => {
       <Route exact path="/">
         <BeerContainer beers={beers} saveFavorite={saveFavorite} />
       </Route>
-      <Route path="/favorites" className="favorite">
+      <Route path="/user/favorites" className="favorite">
         <FavoriteContainer favorites={favorites} />
       </Route>
-      <Route path="*">
+      <Route exact path="/:error">
         <Error />
       </Route>
     </main>

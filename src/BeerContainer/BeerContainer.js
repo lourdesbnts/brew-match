@@ -14,7 +14,6 @@ const BeerContainer = ({ beers, saveFavorite}) => {
       abv={beer.abv}
       img={beer.image_url}
       foodPairings={beer.food_pairing}
-      description={beer.description}
       saveFavorite={saveFavorite}
       />
     )
