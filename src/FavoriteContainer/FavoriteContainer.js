@@ -18,7 +18,13 @@ const FavoriteContainer = ({ favorites }) => {
 
   return (
     <div className="favorite-container">
-      {favCards.length ? favCards : <p className="havent-saved" data-cy="havent-saved">You haven't saved anything.</p>}
+      {favCards.length ? (
+        favCards
+      ) : (
+        <p className="havent-saved" data-cy="havent-saved">
+          You haven't saved anything.
+        </p>
+      )}
     </div>
   );
 };

@@ -6,12 +6,10 @@ import Header from "./Header/Header";
 import { Route } from "react-router-dom";
 import Error from "./Error/Error";
 
-
 const App = () => {
   const [beers, setBeers] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
-  console.log("app", window.location.pathname);
   useEffect(() => {
     getBeerData().then((data) => {
       setBeers(...beers, data);
