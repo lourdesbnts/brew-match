@@ -24,7 +24,10 @@
 .save-to-try-later-button,
 .go-back-button {
   margin-top: 1rem;
- margin-left: 2rem;
+  margin-left: 2rem;
+  background: #000000;
+  color: aliceblue;
+  border-radius: 50px;
 }
 
 .go-back-button {

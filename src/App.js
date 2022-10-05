@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getBeerData } from "./apiCalls";
-import BeerContainer from "./BeerContainer/BeerContainer";
-import FavoriteContainer from "./FavoriteContainer/FavoriteContainer";
-import Header from "./Header/Header";
+import BeerContainer from "./components/BeerContainer/BeerContainer";
+import Header from "./components/Header/Header";
 import { Route } from "react-router-dom";
-import Error from "./Error/Error";
+import Error from "./components/Error/Error";
+import FavoriteContainer from "./components/FavoriteContainer/FavoriteContainer";
 
 const App = () => {
   const [beers, setBeers] = useState([]);

@@ -1,0 +1,27 @@
+.title {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+.description {
+  font-size: 1.5rem;
+}
+
+.home-save-button {
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: aliceblue;
+  font-weight: 600;
+  margin-left: 40rem;
+  outline: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 45px;
+  width: 130px;
+  opacity: 1;
+}
