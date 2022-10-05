@@ -1,5 +1,7 @@
 .beer-card {
-  height: 33rem;
+  display: flex;
+  justify-content: center;
+  height: 30rem;
   width: 15rem;
   box-sizing: border-box;
   border: 3px solid aliceblue;
@@ -8,17 +10,34 @@
   transform-style: preserve-3d;
   transition: 500ms;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
-
+  margin: 30px;
 }
 
 .front {
   display: flex;
-  align-items: center;
+  width: 70%;
+  height: 90%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer-card-image-container {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+}
+
+.beer-card-front-details {
+  border: 2px solid #000000;
+  text-align: center;
+  height: 60%;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .sounds-good {
-  margin-left: 3rem;
+  text-align: center;
 }
 
 .save-to-try-later-button,

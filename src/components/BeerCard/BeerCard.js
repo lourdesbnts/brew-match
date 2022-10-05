@@ -42,12 +42,16 @@ const BeerCard = ({
       className={`beer-card ${flipCards ? "flip" : ""}`}
       data-cy="beer-cards"
     >
+    {/* <div className="front-details"> */}
       <div
         className="front"
         onClick={() => setFlipCards(!flipCards)}
         data-cy="beer-card-front"
       >
+      <div className="beer-card-image-container">
         <img className="image" data-cy="image" src={img} alt={beerName} />
+      </div>
+      <div className="beer-card-front-details">
         <h2 className="beer-name" data-cy="beer-name">
           {beerName}
         </h2>
@@ -58,8 +62,9 @@ const BeerCard = ({
           ABV: {abv}
         </p>
       </div>
+        </div>
+      {/* </div> */}
       <div className="back" data-cy="beer-card-back">
-        {/* <p className="description" data-cy="description">{description}</p> */}
         <p className="sounds-good" data-cy="sounds-good">
           What sounds good with this?
         </p>
