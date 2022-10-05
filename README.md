@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+![Screen Shot 2022-08-07 at 10 55 16 PM](https://user-images.githubusercontent.com/91972449/183348954-c0fc9f5b-998f-46f2-bd52-7cba0d5a11ff.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Introduction](#introduction)
+- [Deployment](#deployment)
+- [Technologies](#technologies)
+- [Set Up](#set-up)
+- [Features](#features)
+- [Future Features](#future-features)
+- [Organizational Resources](#organizational-resources)
+- [Contributors](#contributors)
 
-## Available Scripts
+### Introduction
+As my final project in Turing's Front End Engineering Module 3, we were given free reign to make a project of our choice. I chose to create an app that suggests serveral dishes depending on the beer that you select. 
 
-In the project directory, you can run:
+Project spec can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-### `npm start`
+My biggest win was the use of hooks, before I had only used class based components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My biggest challenge was being able to create a favorite card with only the users selection, beer image, and beer name to show up while also not letting the user create two of the same favorite card. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This app fetches data from [PunkAPI](https://api.punkapi.com/v2/)
 
 ### Deployment
+Project can be viewed [here](https://brew-match.herokuapp.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Technologies
+- JavaScript
+- React (hooks and proptypes)
+- React Router
+- HTML
+- CSS
+- API fetch
+- Cypress (E2E testing)
 
-### `npm run build` fails to minify
+### Set Up
+1. Clone this [repository](https://github.com/lourdesbnts/brew-match).
+2. `cd` into the directory.
+3. Run `npm install`.
+4. To run tests, run `npm run cypress`.
+5. Start the server by running `npm start` and view at http://localhost:8080/.
+6. Enter `control + c` to stop the server at any time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Features
+Viewing a selection of beers:
+
+![](https://media.giphy.com/media/L7zlvHzBAxOWuj21F2/giphy.gif)
+
+Clicking one that catches your eye, the card flips to give you options on what dish would go well with your choice of beer and you can save it:
+
+![](https://media.giphy.com/media/FDDq5PLS84ZrLtLc0U/giphy.gif)
+
+Going back and back home to view more beers and save more options:
+
+![](https://media.giphy.com/media/1qxwbg8gfH19lLGton/giphy.gif)
+
+
+
+### Future Features
+- An alert saying you just saved a beer and food option.
+- Styling the kegs to match the size of the bttles. As well as give stying to the buttons.
+- Adding the detailed description of the beer to the back of the card. 
+- Filtering beers by ABV.
+
+### Organizational Resources
+- [Excalidraw](https://excalidraw.com/) for design map and component architecture.
+
+### Contributors
+- [Lourdes Benites](https://www.linkedin.com/in/lourdesbenites/)
+
+
+
