@@ -44,15 +44,15 @@ Project can be viewed [here](https://brew-match.herokuapp.com/)
 ### Features
 Viewing a selection of beers:
 
-![](https://media.giphy.com/media/L7zlvHzBAxOWuj21F2/giphy.gif)
+![](https://media.giphy.com/media/plGiuD3ZTNkvRk8Zeu/giphy.gif)
 
 Clicking one that catches your eye, the card flips to give you options on what dish would go well with your choice of beer and you can save it:
 
-![](https://media.giphy.com/media/FDDq5PLS84ZrLtLc0U/giphy.gif)
+![](https://media.giphy.com/media/EjjWVPSxiVB0gnqxcU/giphy.gif)
 
-Going back and back home to view more beers and save more options:
+Going back home to view more beers and save more options:
 
-![](https://media.giphy.com/media/1qxwbg8gfH19lLGton/giphy.gif)
+![](https://media.giphy.com/media/MB0aWURs9reox31fNp/giphy.gif)
 
 
 
