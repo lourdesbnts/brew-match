@@ -54,6 +54,10 @@ Going back home to view more beers and save more options:
 
 ![](https://media.giphy.com/media/MB0aWURs9reox31fNp/giphy.gif)
 
+Responsive across all types of devices.
+
+![](https://media.giphy.com/media/YSg1BQbmHwjT5MJyxi/giphy.gif)
+
 
 
 ### Future Features
