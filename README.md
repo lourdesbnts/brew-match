@@ -58,7 +58,7 @@ Going back home to view more beers and save more options:
 
 ### Future Features
 - An alert saying you just saved a beer and food option.
-- Styling the kegs to match the size of the bttles. As well as give stying to the buttons.
+- Styling the kegs to match the size of the bttles. As well as give stying to the buttons. ✅
 - Adding the detailed description of the beer to the back of the card. 
 - Filtering beers by ABV.
 
